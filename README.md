@@ -1,6 +1,6 @@
 # Docx4j Example
 
-### An example for use the docx4j library with springboot
+### An example for using the docx4j library in a springboot project
 
 - A .docx document is generated with the docx4j library.
 
