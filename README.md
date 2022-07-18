@@ -1,6 +1,6 @@
 # Docx4j Example
 
-### An example for use the docx4j library
+### An example for use the docx4j library with springboot
 
 - A .docx document is generated with the docx4j library.
 
@@ -10,8 +10,6 @@ The *placeholders* are replaced in the ".docx" template with text. An example of
 is **${name}**
 
 The replaced text takes the format of the *placeholder* in the template ".docx"
-
-<img src="images/Docx4jExample.png?raw=true" height="250" >
 
 Use this function to generate the document:
 
