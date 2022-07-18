@@ -5,8 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
-
 import org.apache.log4j.Logger;
+
+
 import org.docx4j.model.datastorage.migration.VariablePrepare;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.io3.Save;
@@ -15,10 +16,8 @@ import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 
 import com.j256.simplemagic.ContentInfo;
 import com.j256.simplemagic.ContentInfoUtil;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+
 public class GenerateDocuments {
 
 	private final static String FORMAT = ".docx";
@@ -38,7 +37,7 @@ public class GenerateDocuments {
         
         return null;
     }
-	@RequestMapping(value = {"/docx", "/doc"})
+
 	public static boolean generateDocument(File template, HashMap<String, String> replace,
 			String outputDocument){
 		if (template != null && replace != null && replace.size()>0
