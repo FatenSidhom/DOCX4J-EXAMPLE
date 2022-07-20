@@ -13,11 +13,14 @@ public class ApiController {
     static Logger log = Logger.getLogger(GenerateDocuments.class.getName());
 
 	@PostMapping(value = "/generate")
-	public void generateDOCDocument (@RequestParam String nom,@RequestParam String templatePath, @RequestParam String outputPath){
+	public void generateDOCDocument (@RequestParam String nom,@RequestParam String capital,@RequestParam String cnum, @RequestParam String adr, @RequestParam String templatePath, @RequestParam String outputPath){
 		File template= new File(templatePath);
 		String outputDocument = outputPath;
 		HashMap<String, String> parameters = new HashMap<String,String>();
 		parameters.put("Name", nom);
+		parameters.put("Adresse", adr);
+		parameters.put("Capital", capital);
+		parameters.put("contactnum", cnum);
 		parameters.put("Name.upper", nom.toUpperCase());
 		
 		Boolean success = GenerateDocuments.generateDocument(template, parameters, outputDocument);
