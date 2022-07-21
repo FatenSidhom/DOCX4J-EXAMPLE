@@ -1,4 +1,4 @@
-package docx4jExample;
+package com.wevioo.generator;
 
 import java.io.File;
 import java.io.FileOutputStream;
